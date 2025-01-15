@@ -11,15 +11,13 @@ import service.MateriaService;
 
 @RestController
 @RequestMapping("/materias")
-
 public class MateriaController {
-	
-	@Autowired
-	private MateriaService materiaServicios;
-	
-	@PostMapping
-	public Materia save(@RequestBody Materia materia) {
-		return materiaServicios.save(materia);
-	}
+    @Autowired
+    private MateriaService materiaService;
 
+    @PostMapping
+    public Materia save(@RequestBody Materia materia) {
+        return materiaService.save(materia);
+    }
 }
+
