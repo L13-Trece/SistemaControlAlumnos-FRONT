@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>LOGIN</title>
+<link rel= "Sylesheet" th:href="@{/css/styles.css}" />
+</head>
+
+<body>
+     <h1>Inicia Sesión</h1>
+     
+     <form th:action = "@{/login}" method = "post">
+     
+     <label for = "username">Usuario: </label>
+     <input type = "text" id= "username" name= "username" required />
+     
+     <label for= "password">Contraseña: </label>
+     <input type= "password" id="password" name= "password" required />
+     
+     <button type= "submit">Ingresa</button>
+     
+     </form>
+
+
+      <p th:if= "${error}" th:text= "${error}" style= "color: red;"></p>
+      
+</body>
+</html>
